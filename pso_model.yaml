@@ -1,0 +1,32 @@
+project:
+  name: AI-Based State-Wise Widowed and Divorced Women Population Analysis
+  optimization_algorithm: Particle Swarm Optimization
+  machine_learning_model: Random Forest Regressor
+dataset:
+  records: 36
+  input_feature: Female of all Ages - Widowed
+  target: Female of all Ages - Divorced
+pso_configuration:
+  particles: 12
+  iterations: 20
+  inertia_weight: 0.7
+  cognitive_coefficient: 1.5
+  social_coefficient: 1.5
+best_parameters:
+  n_estimators: 95
+  max_depth: 13
+  min_samples_split: 5
+  min_samples_leaf: 2
+best_cv_mae: 16054.535971818434
+evaluation:
+  baseline:
+    MAE: 103042.8530621693
+    MSE: 76078802438.89615
+    RMSE: 275823.8612573179
+    R2: 0.040332491045792285
+  pso_optimized:
+    MAE: 97464.96660354591
+    MSE: 73337353258.37234
+    RMSE: 270808.7023313179
+    R2: 0.07491347315458485
+saved_model: pso_model.pkl

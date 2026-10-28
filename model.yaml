@@ -1,0 +1,40 @@
+project:
+  name: AI-Based State-Wise Widowed and Divorced Women Population Analysis
+  type: Machine Learning Regression
+  dataset: RS_Session_259_AU_3352_A_and_B.csv
+dataset_information:
+  total_records: 36
+  total_features: 2
+  target_column: Female of all Ages - Divorced
+  input_features:
+  - State/ UT
+  - Female of all Ages - Widowed
+training_configuration:
+  test_size: 0.25
+  random_state: 42
+  cross_validation_folds: 5
+best_machine_learning_model:
+  name: Linear Regression
+  cv_mae: 15611.465799217676
+  test_mae: 10621.5481963847
+  test_rmse: 18138.864093795215
+  test_r2: 0.9958497209577731
+deep_learning_model:
+  architecture:
+  - 64
+  - 32
+  - 16
+  - 1
+  optimizer: Adam
+  loss: Mean Squared Error
+  epochs: 200
+  batch_size: 8
+  test_mae: 59963.621419270836
+  test_rmse: 156340.4817850959
+  test_r2: 0.6916811939491425
+output_files:
+  machine_learning_model: model.pkl
+  deep_learning_model: model.h5
+  deep_learning_preprocessing: dl_preprocessing.pkl
+  yaml_configuration: model.yaml
+  json_configuration: model.json

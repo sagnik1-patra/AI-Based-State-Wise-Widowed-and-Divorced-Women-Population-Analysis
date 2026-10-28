@@ -1,0 +1,32 @@
+project:
+  name: AI-Based State-Wise Widowed and Divorced Women Population Analysis
+  algorithm: Artificial Immune System
+  variant: Clonal Selection Algorithm
+  model: Random Forest Regressor
+dataset:
+  records: 36
+  input_feature: Female of all Ages - Widowed
+  target: Female of all Ages - Divorced
+ais_configuration:
+  population_size: 12
+  generations: 20
+  clone_factor: 4
+  mutation_rate: 0.3
+best_parameters:
+  n_estimators: 95
+  max_depth: 9
+  min_samples_split: 5
+  min_samples_leaf: 2
+best_cv_mae: 16054.535971818434
+evaluation:
+  baseline:
+    MAE: 103042.8530621693
+    MSE: 76078802438.89615
+    RMSE: 275823.8612573179
+    R2: 0.040332491045792285
+  ais_optimized:
+    MAE: 97464.9666035459
+    MSE: 73337353258.37234
+    RMSE: 270808.7023313179
+    R2: 0.07491347315458485
+saved_model: ais_model.pkl
